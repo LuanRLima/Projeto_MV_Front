@@ -1,13 +1,19 @@
 <mat-card>
    <mat-card-title>Novo Funcionário</mat-card-title>
    <form>
-       <mat-form-field>
-           <input matInput placeholder="Nome" [(ngModel)]="funcionario.name">
-       </mat-form-field>
-       <mat-form-field>
-        <input matInput placeholder="CPF" [(ngModel)]="funcionario.cpf">
-    </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="funcionario.name" name="name">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="CPF" [(ngModel)]="funcionario.cpf" name="cpf">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Item" [(ngModel)]="funcionario.listaItem" name="item">
+        </mat-form-field>
+   
+       
    </form> 
+   
     <button mat-raised-button (click)=createFuncionario() color="primary">
         Salvar
     </button>

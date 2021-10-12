@@ -23,7 +23,15 @@ import { FuncionarioCreateComponent } from './funcionario-create/funcionario-cre
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { FormsModule } from '@angular/forms';
-import { MatInputModule } from '@angular/material/input'
+import { MatInputModule } from '@angular/material/input';
+import { FuncionarioReadComponent } from './funcionario-read/funcionario-read.component';
+
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { FuncionariocrudComponent } from './view/funcionariocrud/funcionariocrud.component';
+import { FuncionarioUpdateComponent } from './funcionario-update/funcionario-update.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +42,10 @@ import { MatInputModule } from '@angular/material/input'
     HomeComponent,
     BlueDirective,
     ForDirective,
-    FuncionarioCreateComponent
+    FuncionarioCreateComponent,
+    FuncionarioReadComponent,
+    FuncionariocrudComponent,
+    FuncionarioUpdateComponent
 
     
   ],
@@ -50,7 +61,10 @@ import { MatInputModule } from '@angular/material/input'
     MatSnackBarModule,
     FormsModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
 
     
   ],

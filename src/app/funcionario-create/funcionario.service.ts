@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, LOCALE_ID } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { Funcionario } from './funcionario.model';
@@ -28,5 +28,16 @@ export class FuncionarioService {
     
   }
 
-  
+  read(): Observable<Funcionario[]> {
+    return this.http.get<Funcionario[]>(this.baseUrl)
+  }
+
+  readByID(id: string): Observable<Funcionario> {
+    const url = `${this.baseUrl}/${id}`
+    return this.http.get<Funcionario>(url)
+  }
+  update(funcionario: Funcionario): Observable<Funcionario> {
+    const url = `${this.baseUrl}/${funcionario.id}`
+    return this.http.put<Funcionario>(url, funcionario)
+  }
 }

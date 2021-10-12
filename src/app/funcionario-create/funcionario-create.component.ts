@@ -11,11 +11,14 @@ import { FuncionarioService } from './funcionario.service';
 export class FuncionarioCreateComponent implements OnInit {
 
   funcionario: Funcionario = {
+    id: 1,
     name: "Luan",
     cpf: "09715406408",
     listaItem: [
-      { name: "coxinha"}
-    ] 
+      {name:"aroroz"}
+    ]
+  
+     
 
   };
 
@@ -35,5 +38,11 @@ export class FuncionarioCreateComponent implements OnInit {
     this.router.navigate(['/colaborador'])
     this.funcionarioService.showMessage('Funcionario cancelado')
   }
+
+  adcionarInput(): void {
+
+  }
     
 }
+
+

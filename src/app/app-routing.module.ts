@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './view/home/home.component'; 
 import { FuncionarioCreateComponent } from './funcionario-create/funcionario-create.component';
 import { ListaComponent} from './lista/lista.component';
+import { FuncionariocrudComponent } from './view/funcionariocrud/funcionariocrud.component';
 
 const routes: Routes = [{
   path: "",
@@ -10,12 +11,17 @@ const routes: Routes = [{
 },
 {
   path: "colaborador",
-  component: FuncionarioCreateComponent
+  component: FuncionariocrudComponent
 },
 {
-  path: "lista",
-  component: ListaComponent
-}];
+  path: "colaborador/create",
+    component: FuncionarioCreateComponent
+},
+{
+  path: "colaborador/upadte/:id",
+    component: FuncionarioCreateComponent
+}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

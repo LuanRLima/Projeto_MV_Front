@@ -1,9 +1,8 @@
 export interface Funcionario {
     id?: number
+    name: String
     cpf: string
-    name: string
-    listaItem: [ 
-        { id?: number,
-          name: string,}
-    ]
+    listaItem: [{
+        name: string
+    }] 
 }
