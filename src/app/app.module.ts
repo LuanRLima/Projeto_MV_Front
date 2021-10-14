@@ -31,6 +31,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { FuncionariocrudComponent } from './view/funcionariocrud/funcionariocrud.component';
 import { FuncionarioUpdateComponent } from './funcionario-update/funcionario-update.component';
+import { FuncionarioDeleteComponent } from './funcionario-delete/funcionario-delete.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { FuncionarioUpdateComponent } from './funcionario-update/funcionario-upd
     FuncionarioCreateComponent,
     FuncionarioReadComponent,
     FuncionariocrudComponent,
-    FuncionarioUpdateComponent
+    FuncionarioUpdateComponent,
+    FuncionarioDeleteComponent
 
     
   ],

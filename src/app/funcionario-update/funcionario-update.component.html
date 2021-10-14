@@ -3,14 +3,14 @@
     <form>
         <mat-form-field>
             <input matInput placeholder="Nome"
-                [(ngModel)]="product.name" name="name">
+                [(ngModel)]="funcionario.name" name="name">
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Preço (R$)"
-                [(ngModel)]="product.price" name="price">
+            <input matInput placeholder="CPF"
+                [(ngModel)]="funcionario.cpf" name="cpf">
         </mat-form-field>
     </form>
-    <button mat-raised-button (click)="updateProduct()" color="primary">
+    <button mat-raised-button (click)="updateFuncionario()" color="primary">
         Atualizar
     </button>
     

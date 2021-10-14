@@ -32,12 +32,17 @@ export class FuncionarioService {
     return this.http.get<Funcionario[]>(this.baseUrl)
   }
 
-  readByID(id: string): Observable<Funcionario> {
+  readByID(id: number): Observable<Funcionario> {
     const url = `${this.baseUrl}/${id}`
     return this.http.get<Funcionario>(url)
   }
   update(funcionario: Funcionario): Observable<Funcionario> {
     const url = `${this.baseUrl}/${funcionario.id}`
     return this.http.put<Funcionario>(url, funcionario)
+  }
+  delete(id: number): Observable<Funcionario> {
+    const url = `${this.baseUrl}/${id}`
+    return this.http.delete<Funcionario>(url);
+
   }
 }
